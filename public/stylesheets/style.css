@@ -18,3 +18,19 @@
 .collection-item form {
   margin-top: -5px;
 }
+nav {
+  background-color: #3B5A9D;
+  font-size: 1.5em;
+  color: #FFA633;
+}
+a:link {
+  color: #FFA633;
+  text-decoration: none;
+}
+a:visited {
+  color: #FFA633;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
