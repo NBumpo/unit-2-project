@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<h1>New Walk</h1>
+
+<form id="new-form" action="/walks" method="POST">
+    <label>Caption</label>
+    <input type="text" name="caption">
+    <label>Date:</label>
+    <input type="date" name="date">
+    <label>Distance Traveled:</label>
+    <input type="text" name="distanceTraveled">
+    
+    </select>
+  
+    
+    <input type="submit" value="Log Walk">
+  </form>
+
+
+
+
+
+
+<%- include('../partials/footer') %>

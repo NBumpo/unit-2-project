@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<h1>All Walks</h1>
+
+<a href='walks/new'>New Walk</a>
+
+<% walkDoc.forEach(function(w) { %>
+    <ul>
+      <li><%= w.caption %></li>
+      <li><%= w.date %></li>
+      <li><%= w.distanceTraveled %></li>
+    </ul>
+    <% }); %>
+
+
+
+
+<%- include('../partials/footer') %>

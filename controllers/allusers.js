@@ -1,14 +1,15 @@
 const UserModel = require('../models/user')
 
 module.exports = {
-    show
+    index
 }
 
-async function show(req, res) {
+async function index(req, res) {
 
     try {
 
-        const userDocument = await UserModel.findById(req.params.id)
+        const userDocuments = await UserModel.find({})
+        res.render('allusers/index')
 
 
 
