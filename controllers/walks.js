@@ -4,6 +4,7 @@ module.exports = {
     new: newWalk,
     index,
     create,
+    show,
     
 }
 
@@ -51,8 +52,22 @@ async function create(req, res, next) {
         res.redirect('/walks')
     }
 
-    catch {
+    catch(err) {
         console.log(err)
         res.send(err)
     }
+}
+
+async function show(req, res) {
+   try {
+    const walkDocuments = await WalkModel.findById(req.params.id)
+
+
+    res.render("walks/show", { walk: walkDocuments });
+   }
+
+   catch(err) {
+    console.log(err)
+    res.send(err)
+   }
 }

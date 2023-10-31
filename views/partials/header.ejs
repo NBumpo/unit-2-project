@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
     <title>Walks</title>
 </head>
 <body>
@@ -12,13 +16,14 @@
 
         
         <% if (user) { %>
-            <a href="/walks">Log a Walk</a>
-            <a href="/allusers">All Users</a>
-            <a href="/profile">Profile</a>
-            <a href="/logout">Logout</a>
+            <a href="/">HOME</a>
+            <a href="/walks">WALKS</a>
+            <a href="/allusers">ALL USERS</a>
+            <a href="/profile">PROFILE</a>
+            <a href="/logout" class="logout">LOGOUT</a>
 
         <% } else { %>
-            <a href="/auth/google" class="login">Login</a>
+            <a href="/auth/google" class="login">LOGIN</a>
             <% } %>
 
 

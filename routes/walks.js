@@ -6,4 +6,5 @@ const walksCtrl = require('../controllers/walks')
 router.post('/', walksCtrl.create)
 router.get('/', walksCtrl.index)
 router.get('/new', walksCtrl.new)
+router.get('/:id', walksCtrl.show);
 module.exports = router;

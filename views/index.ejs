@@ -2,13 +2,13 @@
 
 
 
+    <%if (user) { %>
+        <h1>Hello, <%=user.name%></h1>
 
-    <h1>Index Page</h1>
+        <%} else { %>
+            <h1>Hello, please login</h1>
 
-
-
-
-
+            <% } %>
 
 
 
