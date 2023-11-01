@@ -52,6 +52,7 @@ a {
   background-color: #193737;
   color: #5f9392;
   border-radius: 3px;
+  
 }
 a:link {
   color: #5f9392;
@@ -64,40 +65,46 @@ a:visited {
 a:hover {
   color: #193737;
   background-color: #a0d7d4;
-  
+  box-shadow: 0 0 15px 3px #759799;
 }
 
 .logout {
   background-color: #da0007;
   color: #193737;
   font-weight: bold;
+  box-shadow: none;
 }
 .logout:visited {
   background-color: #da0007;
   color: #193737;
   font-weight: bolder;
+  box-shadow: none;
 }
 .logout:hover {
   background-color: white;
   color: #da0007;
   font-weight: bolder;
+  box-shadow: none;
 }
 
 .login {
   background-color: #da0007;
   color: #193737;
   font-weight: bolder;
+  box-shadow: none;
 }
 .login:visited {
   background-color: #da0007;
   color: #193737;
   font-weight: bolder;
+  box-shadow: none;
 }
 
 .login:hover {
   background-color: white;
   color: #da0007;
   font-weight: bolder;
+  box-shadow: none;
 }
 
 .indexwalklog {
@@ -106,6 +113,9 @@ a:hover {
   background-color: #193737;
   border-radius: 5px;
   list-style-type: none;
+  display: flex;
+  
+  flex-direction: column;
 }
 
 .detailsbtn {

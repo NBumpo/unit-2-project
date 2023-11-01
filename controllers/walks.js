@@ -77,16 +77,14 @@ async function show(req, res) {
 async function deleteWalk(req, res) {
     try {
 
-        const walkDoc = await WalkModel.findOne({
-            'walks._id': req.params.id,
-            'walks._user': req.params._id,
-        })
+        await WalkModel.findByIdAndDelete(req.params.id)
 
-        walkDoc.walks.remove(req.params.id)
+       
+        
 
+       
+        
         res.redirect('/walks')
-
-        await walkDoc.save()
 
     } catch(err) {
         console.log(err)

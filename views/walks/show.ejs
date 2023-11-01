@@ -1,11 +1,12 @@
 <%- include('../partials/header') %>
 
-
+    <ul class="indexwalklog">
+        <li><%= user.name %></li>
     <li><%= walk.caption %></li>
     <li><%= walk.date %></li>
       <li><%= walk.distanceTraveled %></li>
-
-
+      <li><%= walk._id %></li>
+        </ul>
 
 
       <% if (user) { %>
