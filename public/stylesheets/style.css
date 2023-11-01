@@ -105,10 +105,12 @@ a:hover {
   margin-bottom: 3%;
   background-color: #193737;
   border-radius: 5px;
+  list-style-type: none;
 }
 
 .detailsbtn {
   opacity: 0.5;
+  float: right;
   
 }
 
@@ -119,4 +121,17 @@ a:hover {
 
 h1 {
   margin-bottom: 5%;
+}
+
+.alluserpreview {
+  font-size: 2em;
+  text-decoration: none;
+}
+.profileimg {
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.viewprofilebtn {
+  float:right;
 }

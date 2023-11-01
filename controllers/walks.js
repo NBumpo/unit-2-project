@@ -2,9 +2,11 @@ const WalkModel = require('../models/walk')
 
 module.exports = {
     new: newWalk,
+    
     index,
     create,
     show,
+    deleteWalk
     
 }
 
@@ -70,4 +72,24 @@ async function show(req, res) {
     console.log(err)
     res.send(err)
    }
+}
+
+async function deleteWalk(req, res) {
+    try {
+
+        const walkDoc = await WalkModel.findOne({
+            'walks._id': req.params.id,
+            'walks._user': req.params._id,
+        })
+
+        walkDoc.walks.remove(req.params.id)
+
+        res.redirect('/walks')
+
+        await walkDoc.save()
+
+    } catch(err) {
+        console.log(err)
+        res.send(err)
+    }
 }

@@ -8,8 +8,8 @@ async function index(req, res) {
 
     try {
 
-        const userDocuments = await UserModel.find({})
-        res.render('allusers/index')
+        const userDoc = await UserModel.find({})
+        res.render('allusers/index', { user: userDoc })
 
 
 
@@ -17,6 +17,6 @@ async function index(req, res) {
         console.log(err)
         res.send(err)
     }
-    
+
 
 }

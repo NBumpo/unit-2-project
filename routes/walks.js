@@ -7,4 +7,5 @@ router.post('/', walksCtrl.create)
 router.get('/', walksCtrl.index)
 router.get('/new', walksCtrl.new)
 router.get('/:id', walksCtrl.show);
+router.delete('/show/:id', walksCtrl.deleteWalk)
 module.exports = router;

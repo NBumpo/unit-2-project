@@ -1,13 +1,18 @@
 <%- include('../partials/header') %>
 
 
+    <li><%= walk.caption %></li>
+    <li><%= walk.date %></li>
+      <li><%= walk.distanceTraveled %></li>
 
 
 
 
-
-
-
+      <% if (user) { %>
+        <form action="/walks/<%= walk._id %>?_method=DELETE" method="POST">
+          <button type="Submit">X</button>
+        </form>
+      <% } %>
 
 
 

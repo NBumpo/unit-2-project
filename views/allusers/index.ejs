@@ -3,7 +3,13 @@
 
 <h1>All Users</h1>
 
-
+<% user.forEach(function(u) { %>
+    <ul class="indexwalklog">
+      
+      <li class="alluserpreview"><img class='profileimg' alt="avatar" src="<%= u.avatar %>" referrerpolicy="no-referrer" ><%= u.name %></li>
+      <a href='/walks/<%= u._id %>' class="viewprofilebtn">VIEW PROFILE</a>
+    </ul>
+    <% }); %>
 
 
 
