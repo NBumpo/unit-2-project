@@ -8,4 +8,6 @@ router.get('/', walksCtrl.index)
 router.get('/new', walksCtrl.new)
 router.get('/:id', walksCtrl.show);
 router.delete('/:id', walksCtrl.deleteWalk)
+router.get("/:id/edit",walksCtrl.edit)
+router.put("/:id",walksCtrl.update)
 module.exports = router;

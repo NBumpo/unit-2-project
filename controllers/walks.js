@@ -6,8 +6,9 @@ module.exports = {
     index,
     create,
     show,
-    deleteWalk
-    
+    deleteWalk,
+    edit,
+    update
 }
 
 // async function show(req, res) {
@@ -91,3 +92,28 @@ async function deleteWalk(req, res) {
         res.send(err)
     }
 }
+
+
+async function edit(req, res) {
+    const walk = await WalkModel.findOne({_id: req.params.id});
+    if (!walk) return res.redirect('/walks');
+    res.render('walks/edit', { walk });
+  }
+
+
+
+  async function update(req, res) {
+    try {
+      const updatedBook = await Book.findOneAndUpdate(
+        {_id: req.params.id, userRecommending: req.user._id},
+        // update object with updated properties
+        req.body,
+        // options object {new: true} returns updated doc
+        {new: true}
+      );
+      return res.redirect(`/books/${updatedBook._id}`);
+    } catch (e) {
+      console.log(e.message);
+      return res.redirect('/books');
+    }
+  }
