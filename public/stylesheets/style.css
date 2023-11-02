@@ -72,14 +72,12 @@ a:hover {
 .logout {
   background-color: #da0007;
   color: #193737;
-  font-weight: bold;
   box-shadow: none;
   
 }
 .logout:visited {
   background-color: #da0007;
   color: #193737;
-  font-weight: bolder;
   box-shadow: none;
 }
 .logout:hover {
