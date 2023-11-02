@@ -37,22 +37,22 @@ main {
   margin-top: -5px;
 }
 nav {
-  width: 50%;
-  margin-top: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
+  width: 75%;
+  
   display: flex;
   justify-content: space-between;
 }
 
 a {
+  height: 10%;
+  margin-top: 8%;
   font-size: 1.5em;
   padding-left: 25px;
   padding-right: 25px;
   background-color: #193737;
   color: #5f9392;
   border-radius: 3px;
-  
+  opacity: 0.7;
 }
 a:link {
   color: #5f9392;
@@ -66,6 +66,7 @@ a:hover {
   color: #193737;
   background-color: #a0d7d4;
   box-shadow: 0 0 15px 3px #759799;
+  opacity: 0.7;
 }
 
 .logout {
@@ -73,6 +74,7 @@ a:hover {
   color: #193737;
   font-weight: bold;
   box-shadow: none;
+  
 }
 .logout:visited {
   background-color: #da0007;
@@ -108,13 +110,13 @@ a:hover {
 }
 
 .indexwalklog {
+  
   margin-top: 3%;
-  margin-bottom: 3%;
+  margin-bottom: 0;
   background-color: #193737;
   border-radius: 5px;
   list-style-type: none;
   display: flex;
-  
   flex-direction: column;
 }
 
@@ -131,17 +133,35 @@ a:hover {
 
 h1 {
   margin-bottom: 5%;
+  opacity: 0.7;
 }
 
 .alluserpreview {
   font-size: 2em;
   text-decoration: none;
+  padding-top: 10px;
 }
 .profileimg {
   border-radius: 50%;
   text-decoration: none;
+  width: 75px;
+  height: 75px;
 }
 
 .viewprofilebtn {
   float:right;
+}
+
+.logo {
+  margin-left: 4%;
+  margin-top: 4%;
+  display: flex;
+  opacity: 0.4;
+}
+
+.walklogitem {
+  color: #193737;
+  background-color: #a0d7d4;
+  /* box-shadow: 0 0 15px 3px #759799; */
+  font-size: larger;
 }

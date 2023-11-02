@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
 
     <ul class="indexwalklog">
-        <li><%= user.name %></li>
-    <li><%= walk.caption %></li>
-    <li><%= walk.date %></li>
-      <li><%= walk.distanceTraveled %></li>
-      <li><%= walk._id %></li>
+    
+    <li>Descripton: <%= walk.caption %></li>
+    <li>Date: <%= walk.date %></li>
+      <li>Distance Traveled: <%= walk.distanceTraveled %></li>
+     
         </ul>
 
 
@@ -15,6 +15,20 @@
         </form>
       <% } %>
 
+        <form method="POST" action="/walks/<%= walk._id %>/comments">
+            <label>Comment</label>
+            <textarea name="content"></textarea>
+        
+            <input type="submit" value="Add Comment">
+        
+        </form>
+
+        <% walk.comments.forEach(function(c) { %>
+            <ul class="indexwalklog">
+              <li><%= c.content %></li>
+              
+            </ul>
+            <% }); %>
 
 
 <%- include('../partials/footer') %>

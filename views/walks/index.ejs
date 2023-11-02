@@ -5,13 +5,16 @@
 <a href='walks/new'>New Walk</a>
 
 <% walkDoc.forEach(function(w) { %>
+    <section class="item">
     <ul class="indexwalklog">
-      <li><%= user.name %></li>
-      <li><%= w.caption %></li>
-      <li><%= w.date %></li>
-      <li><%= w.distanceTraveled %></li>
+      <li class="walklogitem"><strong>USER: </strong><%= user.name %></li>
+      <li class="walklogitem">DESCRIPTION: <%= w.caption %></li>
+      <li class="walklogitem">DATE: <%= w.date %></li>
+      <li class="walklogitem">DISTANCE TRAVELED: <%= w.distanceTraveled %></li>
       <a href='/walks/<%= w._id %>' class="detailsbtn">DETAILS</a>
     </ul>
+    
+    </section>
     <% }); %>
 
 
