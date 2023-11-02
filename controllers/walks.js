@@ -6,7 +6,6 @@ module.exports = {
     create,
     show,
     deleteWalk,
-    edit,
     update,
     showEdit
 }
@@ -121,7 +120,7 @@ async function deleteWalk(req, res) {
     const walkDocuments = await WalkModel.findById(req.params.id)
 
 
-    res.render("walks/edit", { walk: walkDocuments });
+    res.render("walks/:id/edit", { walk: walkDocuments });
    }
 
    catch(err) {
