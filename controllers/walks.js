@@ -2,13 +2,13 @@ const WalkModel = require('../models/walk')
 
 module.exports = {
     new: newWalk,
-    
     index,
     create,
     show,
     deleteWalk,
     edit,
-    update
+    update,
+    showEdit
 }
 
 // async function show(req, res) {
@@ -94,11 +94,7 @@ async function deleteWalk(req, res) {
 }
 
 
-async function edit(req, res) {
-    const walk = await WalkModel.findOne({_id: req.params.id});
-    if (!walk) return res.redirect('/walks');
-    res.render('walks/edit', { walk });
-  }
+
 
 
 
@@ -117,3 +113,19 @@ async function edit(req, res) {
       return res.redirect('/books');
     }
   }
+
+
+
+  async function showEdit(req, res) {
+  try {
+    const walkDocuments = await WalkModel.findById(req.params.id)
+
+
+    res.render("walks/edit", { walk: walkDocuments });
+   }
+
+   catch(err) {
+    console.log(err)
+    res.send(err)
+   }
+}
