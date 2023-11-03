@@ -8,14 +8,15 @@
      
         </ul>
 
+        <a href='/walks/<%= walk._id %>/edit' class="detailsbtn">EDIT</a>
 
       <% if (user) { %>
         <form action="/walks/<%= walk._id %>?_method=DELETE" method="POST">
-          <button type="Submit">DELETE </button>
+          <button class='deletebtn' type="Submit" style="cursor:pointer">DELETE </button>
         </form>
       <% } %>
 
-      <a href='/walks/<%= walk._id %>/edit' class="detailsbtn">EDIT</a>
+      
 
         <form method="POST" action="/walks/<%= walk._id %>/comments">
             <label>Comment</label>

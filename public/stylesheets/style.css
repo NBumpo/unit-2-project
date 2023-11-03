@@ -110,22 +110,22 @@ a:hover {
 .indexwalklog {
   box-shadow: 0 0 15px 3px #759799;
   margin-bottom: 0;
-  background-color: #193737;
+  background-color: #a0d7d4;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  
+  opacity: 0.7;
 }
 
 .detailsbtn {
-  opacity: 0.5;
+  opacity: 0.8;
   float: left;
 
   
 }
 
 .detailsbtn:hover {
-  opacity: 1.0;
+  opacity: 0.7;
   
 }
 
@@ -198,12 +198,28 @@ li {
 .showlabel {
   display: flex;
   font-size: 1.8em;
-  color:#759799
+  color:#193737;
 }
 
 .newform {
   background-color:#a0d7d4;
   box-shadow: 0 0 15px 3px #759799;
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: 0.7;
+  color:#193737;
+}
+
+.deletebtn {
+  background-color: #193737;
+  border-style: none;
+  font-size: 1.5em;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.deletebtn:hover {
+  color: #193737;
+  background-color: #a0d7d4;
+  box-shadow: 0 0 15px 3px #759799;
+  opacity: 0.7;
 }
