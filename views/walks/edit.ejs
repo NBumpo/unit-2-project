@@ -2,7 +2,7 @@
 
 <h1>Edit Walk</h1>
 
-<form action="/walks" method="POST">
+<form action="/walks/<%= walk._id %>?_method=PUT" method="POST">
     <label>Description</label>
     <input type="text" name="caption">
     <label>Date:</label>
@@ -13,7 +13,7 @@
     </select>
   
     
-    <input type="submit" value="Submit Edit">
+    <input type="submit" value="Submit Edit" >
   </form>
 
 

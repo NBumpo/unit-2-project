@@ -2,16 +2,16 @@
 
     <ul class="indexwalklog">
     
-    <li>Descripton: <%= walk.caption %></li>
-    <li>Date: <%= walk.date %></li>
-      <li>Distance Traveled: <%= walk.distanceTraveled %></li>
+    <li class="showlabel">Descripton: <%= walk.caption %></li>
+    <li class="showlabel">Date: <%= walk.date %></li>
+    <li class="showlabel">Distance Traveled: <%= walk.distanceTraveled %></li>
      
         </ul>
 
 
       <% if (user) { %>
         <form action="/walks/<%= walk._id %>?_method=DELETE" method="POST">
-          <button type="Submit">X</button>
+          <button type="Submit">DELETE </button>
         </form>
       <% } %>
 

@@ -99,17 +99,13 @@ async function deleteWalk(req, res) {
 
   async function update(req, res) {
     try {
-      const updatedBook = await Book.findOneAndUpdate(
-        {_id: req.params.id, userRecommending: req.user._id},
-        // update object with updated properties
-        req.body,
-        // options object {new: true} returns updated doc
-        {new: true}
+      const updatedWalk = await WalkModel.findByIdAndUpdate(
+        req.params.id, req.body
       );
-      return res.redirect(`/books/${updatedBook._id}`);
-    } catch (e) {
-      console.log(e.message);
-      return res.redirect('/books');
+      return res.redirect(`/walks/${updatedWalk._id}`);
+    } catch (err) {
+      console.log(err.message);
+      return res.redirect('/walks');
     }
   }
 
@@ -120,7 +116,7 @@ async function deleteWalk(req, res) {
     const walkDocuments = await WalkModel.findById(req.params.id)
 
 
-    res.render("walks/:id/edit", { walk: walkDocuments });
+    res.render("walks/edit", { walk: walkDocuments });
    }
 
    catch(err) {
